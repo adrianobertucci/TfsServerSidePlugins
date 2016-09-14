@@ -1,10 +1,10 @@
+
 # TfsServerSidePlugins
 Server Side Plugins for Team Foundation Server 2015
 
-#### List of Server-Side-Plugins
-
-#####-BlockWebCheckin
-Blocks Checkin in Team Web Access
+### List of Server-Side-Plugins
+  -BlockWebCheckin
+  Blocks Checkin in Team Web Access
 
 
 #### Deploying the TfsServerSidePlugins
