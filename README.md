@@ -8,4 +8,4 @@ Server Side Plugins for Team Foundation Server 2015
 
 
 #### Deploying the TfsServerSidePlugins
-Copy the assemblies to C:\Program Files\Microsoft Team Foundation Server 14.0\Application Tier\Web Services\bin\Plugins, machine with Team Foundation Server.
+Copy the assemblies to `*C:\Program Files\Microsoft Team Foundation Server 14.0\Application Tier\Web Services\bin\Plugins*`, machine with Team Foundation Server.
