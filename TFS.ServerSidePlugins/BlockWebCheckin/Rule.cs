@@ -41,11 +41,17 @@ namespace BlockWebCheckin
                 {
                     CheckinNotification args = notificationEventArgs as CheckinNotification;
                     //Through the temporary Workspace created by TWA, validate and block the checkin in Team Web Access.
-                    if (args.WorkspaceName.Contains("TMP-TfsWebCheckin"))
-                    {
-                        statusCode = -1;
-                        statusMessage = "[TFS.ServerSidePlugins.BlockWebCheckin] Updates on Team Web Access is not allowed. Please use another editor.";
-                        return EventNotificationStatus.ActionDenied;
+                    if(args.CheckinType == CheckinType.Workspace)
+                    { 
+                        if(args.WorkspaceName != null)
+                        { 
+                            if (args.WorkspaceName.Contains("TMP-TfsWebCheckin"))
+                            {
+                                statusCode = -1;
+                                statusMessage = "[TFS.ServerSidePlugins.BlockWebCheckin] Updates on Team Web Access is not allowed. Please use another editor.";
+                                return EventNotificationStatus.ActionDenied;
+                            }
+                        }
                     }
 
                 }
